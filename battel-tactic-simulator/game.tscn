@@ -1,0 +1,63 @@
+[gd_scene load_steps=8 format=3 uid="uid://boprerecqr5qn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwb40"]
+albedo_color = Color(0.27058825, 0.8392157, 0.27450982, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80nbo"]
+albedo_color = Color(0.39215687, 0.23529412, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e2o6t"]
+albedo_color = Color(0.050980393, 0.5372549, 0.41568628, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feb5d"]
+albedo_color = Color(0.11764706, 0.36862746, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fc0e3"]
+albedo_color = Color(0.5211409, 0.5211405, 0.52114046, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
+albedo_color = Color(0.9843137, 0.015686275, 0.015686275, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
+albedo_color = Color(0.28235295, 1, 1, 1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Grass" type="CSGBox3D" parent="."]
+material = SubResource("StandardMaterial3D_mwb40")
+
+[node name="Mud" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.021102, 0, 0)
+material = SubResource("StandardMaterial3D_80nbo")
+
+[node name="Forest" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0530213, 0, 0)
+material = SubResource("StandardMaterial3D_e2o6t")
+
+[node name="Water" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.0690314)
+material = SubResource("StandardMaterial3D_feb5d")
+
+[node name="Mountain" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.090579)
+material = SubResource("StandardMaterial3D_fc0e3")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.014136722, 0.9999001, 0, -0.9999001, -0.014136722, 0, 16.282448, 0)
+
+[node name="LightmapProbe" type="LightmapProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.388231, 0)
+
+[node name="LightmapProbe2" type="LightmapProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9582558, 0)
+
+[node name="LightmapProbe3" type="LightmapProbe" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24.868937, 0)
+
+[node name="Red Team" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.187659, 0)
+material = SubResource("StandardMaterial3D_7jktm")
+
+[node name="Blue Team" type="CSGSphere3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0098030865, 1.887954, 0.8855148)
+material = SubResource("StandardMaterial3D_ryrav")
